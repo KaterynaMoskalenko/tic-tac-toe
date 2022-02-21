@@ -3,6 +3,12 @@
 const fieldWork = document.querySelector('.field-work')
 let step = 0;
 let result = '';
+const content = document.querySelector('.content')
+const container = document.querySelector('.container')
+const overlay = document.querySelector('.overlay')
+const btn = document.querySelector('.btn')
+const modal = document.querySelector('.modal')
+
 fieldWork.addEventListener('click', e => {
     if (e.target.className == 'box') {
         // console.log(e.target)
@@ -36,4 +42,12 @@ const check = () => {
 
 const winResult = winner => {
     console.log(winner);
+    content.innerHTML = `Win ${winner} !`;
+    container.style.display = "block";
 }
+const closeModal = () => {
+    modal.style.display = "none";
+    location.reload();
+}
+overlay.addEventListener('click', closeModal);
+btn.addEventListener('click', closeModal);
