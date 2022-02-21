@@ -1,5 +1,5 @@
 'use strict';
-
+debugger
 const fieldWork = document.querySelector('.field-work')
 let step = 0;
 let result = '';
@@ -13,12 +13,24 @@ let player = 'X'
 
 fieldWork.addEventListener('click', e => {
     if (e.target.className == 'box') {
-        // console.log(e.target)
-        step % 2 === 0 ? e.target.innerHTML = 'x' : e.target.innerHTML = '0';
-        step % 2 === 0 ? (message.innerHTML = " Your move Mr " + '0')
-            : (message.innerHTML = " Your move Mr " + player);
-        step++;
-        check();
+        if (e.target.innerHTML && (step === 9)) {
+            console.log(step)
+            console.log(check());
+        }
+        if (e.target.innerHTML) {
+            alert('cell is occupied')
+            return;
+
+
+        }
+        else {
+            // console.log(e.target)
+            step % 2 === 0 ? e.target.innerHTML = 'x' : e.target.innerHTML = '0';
+            step % 2 === 0 ? (message.innerHTML = " Your move Mr " + '0')
+                : (message.innerHTML = " Your move Mr " + player);
+            step++;
+            check();
+        }
     }
 })
 
@@ -43,6 +55,7 @@ const check = () => {
             winResult(result);
         } else if (step === 9) {
             content.innerHTML = 'DEAD HEAT'
+            container.style.display = "block";
         }
 
     }
