@@ -1,5 +1,5 @@
 'use strict';
-debugger
+
 const fieldWork = document.querySelector('.field-work')
 let step = 0;
 let result = '';

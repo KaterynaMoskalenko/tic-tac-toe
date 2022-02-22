@@ -4,7 +4,8 @@
     box-sizing: border-box;
 }
 body {
-    max-width: 1200px;
+    max-width: 1400px;
+    height: auto;
 }
 header {
     text-align: center;
@@ -103,4 +104,47 @@ span {
 .content {
     color: #aeebeb;
     font-size: 30px;
+}
+
+.footer-container {
+    max-width: 1300px;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 25px;
+}
+
+.footer-git {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 50px;
+    color: #302727;
+    width: 182px;
+    height: 50px;
+}
+
+.git {
+    text-decoration: none;
+    color: #352e2e;
+}
+
+.git:hover {
+    color: #bdae82;
+}
+
+.rs {
+    color: #1f1b1b;
+    text-decoration: none;
+    padding: 0 0px;
+    line-height: 50px;
+    transition: 0.3s;
+}
+
+.rs:hover {
+    color: #bdae82;
 }
