@@ -54,7 +54,7 @@ const check = () => {
             result = 'noughts';
             winResult(result);
         } else if (step === 9) {
-            content.innerHTML = 'DEAD HEAT'
+            content.innerHTML = 'DEAD HEAT and of couse 9 step'
             container.style.display = "block";
         }
 
@@ -63,7 +63,7 @@ const check = () => {
 
 const winResult = winner => {
     console.log(winner);
-    content.innerHTML = `Win ${winner} !`;
+    content.innerHTML = `Win ${winner} ! step${step}`;
     container.style.display = "block";
     btn.style.boxShadow = "0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22)"
 }
